@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DSC GIT WORKSHOP</title>
+</head>
+<style>
+
+
+</style>
+<body>
+    <h1>Simple App</h1>
+    <form action="">
+        <input id="first" type="number" required>
+        <input id="second" type="number" required>
+        <p id="result"></p>
+        <input id="submit" type="submit" value="submit">
+    </form>
+
+
+    <script>
+
+       let form = document.querySelector('form');
+       document.querySelector('#submit').addEventListener('click', e=>{
+           e.preventDefault();
+
+           let numb1 = document.querySelector('#first').value;
+           let numb2 = document.querySelector('#second').value;
+
+           document.querySelector('#result').innerHTML = parseFloat(numb1) + parseFloat(numb2);
+
+       });
+
+    
+    </script>
+    
+</body>
+</html>
