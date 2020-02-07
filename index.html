@@ -23,29 +23,45 @@
         </fieldset>
         <br>
 
+
+
+    </form>
+    <form action="">
         <fieldset>
             <h3>subtraction</h3>
-            <input id="first" type="number" required>
-            <input id="second" type="number" required>
+            <input id="first1" type="number" required>
+            <input id="second1" type="number" required>
             <p id="result"></p>
             <input id="submit" type="submit" value="calculate">
 
         </fieldset>
-
     </form>
 
 
     <script>
 
        let form = document.querySelector('form');
-       document.querySelector('#submit').addEventListener('click', e=>{
+       let calcs = document.querySelectorAll('#submit');
+
+       let results = document.querySelectorAll('#result');
+
+
+
+
+       calcs[0].addEventListener('click', e=>{
            e.preventDefault();
 
            let numb1 = document.querySelector('#first').value;
            let numb2 = document.querySelector('#second').value;
+           results[0].innerHTML = parseFloat(numb1) + parseFloat(numb2);
 
-           document.querySelector('#result').innerHTML = parseFloat(numb1) + parseFloat(numb2);
+       });
 
+       calcs[1].addEventListener('click', e=>{
+           e.preventDefault();
+           let numb1 = document.querySelector('#first1').value;
+           let numb2 = document.querySelector('#second1').value;
+           results[1].innerHTML = parseFloat(numb1) * parseFloat(numb2);  
        });
 
     
